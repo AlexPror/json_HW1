@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./font/NFS_by_JLTV.ttf" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+      }
+
+      .container {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .product {
+        border-radius: 5px;
+        border: 1px solid black;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 350px;
+        width: 500px;
+        gap: 20px;
+        padding: 10px;
+      }
+
+      .product__title {
+        text-align: center;
+      }
+
+      .product__img {
+        max-width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <script src="./data.js"></script>
+    <script>
+      "use strict";
+      dataInfo.forEach((element) => {
+        console.log(`${element.car} продается по цене ${element.price}`);
+      });
+
+      const container = document.querySelector(".container");
+      dataInfo.forEach((product) => {
+        const productEl = document.createElement("div");
+        productEl.classList.add("product");
+
+        const title = document.createElement("div");
+        title.classList.add("product__title");
+
+        const carName = document.createElement("h2");
+        carName.classList.add("product__car-name");
+        carName.textContent = product.car;
+
+        const modelName = document.createElement("h3");
+        modelName.classList.add("product__model-name");
+        modelName.textContent = product.model;
+
+        const carImg = document.createElement("img");
+        carImg.classList.add("product__img");
+        carImg.src = product.car_img;
+
+        const descr = document.createElement("p");
+        descr.classList.add("product__descr");
+        descr.textContent = product.description;
+
+        const price = document.createElement("div");
+        price.classList.add("product__price");
+        price.textContent = product.price;
+
+        container.appendChild(productEl);
+        productEl.appendChild(title);
+        title.appendChild(carName);
+        title.appendChild(modelName);
+        productEl.appendChild(carImg);
+        productEl.appendChild(descr);
+        productEl.appendChild(price);
+      });
+    </script>
+  </body>
+</html>
