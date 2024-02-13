@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>json_HW2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="products"></div>
+    </div>
+    <script src="data.js"></script>
+    <script>
+      const data = JSON.parse(dataProducts);
+      for (const key in data) {
+        let productCard = "";
+        let card = document.createElement("div");
+        card.classList.add("item");
+        productCard += '<img src="' + data[key].image + '">';
+        productCard += "<div>" + data[key].title + "</div>";
+        productCard += "<p>" + data[key].text + "</p>";
+        data[key].currency === "USD"
+          ? (productCard += "<div>" + "$" + data[key].price + "</div>")
+          : (productCard += "<div>" + "P" + data[key].price + "</div>");
+        card.innerHTML = productCard;
+        document.querySelector(".products").append(card);
+      }
+    </script>
+  </body>
+</html>

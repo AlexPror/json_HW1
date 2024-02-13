@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+      }
+
+      .container {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .product-item {
+        width: 652px;
+        height: 306px;
+        left: 492px;
+        right: -230px;
+        top: 319px;
+        bottom: -319px;
+        border: 1px solid black;
+        display: flex;
+      }
+
+      .product-item:not(:last-child) {
+        margin-bottom: 40px;
+      }
+
+      .cross {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-top: 28px;
+        margin-right: 22px;
+      }
+
+      .product__productImg {
+        width: 262px;
+        height: 306px;
+        border: 1px dotted grey;
+      }
+
+      .product-descr {
+        margin-top: 22px;
+        margin-left: 31px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .product-descr__title {
+        color: rgb(34, 34, 34);
+        font-family: Lato;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-bottom: 42px;
+      }
+
+      .product-list {
+      }
+
+      li {
+        list-style-type: none;
+        font-family: Lato;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <!-- <div class="container">
+      <div class="product">
+        <div class="product-item">
+          <svg
+            class="cross"
+            width="18.000000"
+            height="18.000000"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <desc>Created with Pixso.</desc>
+            <defs />
+            <path
+              id="Vector"
+              d="M11.2454 9L17.5302 2.71521C17.8285 2.41736 17.9962 2.01331 17.9966 1.59192C17.997 1.17041 17.8299 0.766113 17.5322 0.467773C17.2344 0.169556 16.8304 0.00183105 16.4089 0.00134277C15.9875 0.000976562 15.5831 0.168091 15.2849 0.46582L9 6.75073L2.71515 0.46582C2.41687 0.167603 2.01233 0 1.59052 0C1.1687 0 0.764099 0.167603 0.46582 0.46582C0.167542 0.76416 0 1.1687 0 1.59045C0 2.01233 0.167542 2.41687 0.46582 2.71521L6.75067 9L0.46582 15.2848C0.167542 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167542 17.2358 0.46582 17.5342C0.764099 17.8324 1.1687 18 1.59052 18C2.01233 18 2.41687 17.8324 2.71515 17.5342L9 11.2493L15.2849 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8325 17.2358 18 16.8313 18 16.4095C18 15.9877 17.8325 15.5831 17.5342 15.2848L11.2454 9Z"
+              fill="#575757"
+              fill-opacity="1.000000"
+              fill-rule="nonzero"
+            />
+          </svg>
+          <div class="product-img">
+            <img src="img/t-shirt.jpg" alt="" />
+          </div>
+          <div class="product-descr">
+            <div class="product-descr__title">MANGO PEOPLE <br />T-SHIRT</div>
+            <ul class="product-list">
+              <li>Price: <span>$</span><span>$300</span></li>
+              <li>Color: Red</li>
+              <li>Size: Xl</li>
+              <li>Quantity: <input type="text" /></li>
+            </ul>
+          </div>
+        </div>
+        <div class="product-item">
+          <svg
+            class="cross"
+            width="18.000000"
+            height="18.000000"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <desc>Created with Pixso.</desc>
+            <defs />
+            <path
+              id="Vector"
+              d="M11.2454 9L17.5302 2.71521C17.8285 2.41736 17.9962 2.01331 17.9966 1.59192C17.997 1.17041 17.8299 0.766113 17.5322 0.467773C17.2344 0.169556 16.8304 0.00183105 16.4089 0.00134277C15.9875 0.000976562 15.5831 0.168091 15.2849 0.46582L9 6.75073L2.71515 0.46582C2.41687 0.167603 2.01233 0 1.59052 0C1.1687 0 0.764099 0.167603 0.46582 0.46582C0.167542 0.76416 0 1.1687 0 1.59045C0 2.01233 0.167542 2.41687 0.46582 2.71521L6.75067 9L0.46582 15.2848C0.167542 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167542 17.2358 0.46582 17.5342C0.764099 17.8324 1.1687 18 1.59052 18C2.01233 18 2.41687 17.8324 2.71515 17.5342L9 11.2493L15.2849 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8325 17.2358 18 16.8313 18 16.4095C18 15.9877 17.8325 15.5831 17.5342 15.2848L11.2454 9Z"
+              fill="#575757"
+              fill-opacity="1.000000"
+              fill-rule="nonzero"
+            />
+          </svg>
+          <div class="product-img">
+            <img src="img/capsule.jpg" alt="" />
+          </div>
+          <div class="product-descr">
+            <div class="product-descr__title">ELLERY X M'O <br />CAPSULE</div>
+            <ul class="product-list">
+              <li>Price: <span>$52</span></li>
+              <li>Color: Black</li>
+              <li>Size: Xl</li>
+              <li>Quantity: <input type="text" /></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <script src="data.js"></script>
+    <script>
+      "use strict";
+
+      const container = document.querySelector(".container");
+      dataProducts.forEach((product) => {
+        const productEl = document.createElement("div");
+        productEl.classList.add("product");
+
+        const productItem = document.createElement("div");
+        productItem.classList.add("product-item");
+
+        const productImg = document.createElement("img");
+        productImg.classList.add("product__productImg");
+        productImg.src = product.img;
+
+        const descr = document.createElement("div");
+        descr.classList.add("product-descr");
+
+        const titleWrap = document.createElement("div");
+        title.classList.add("product-descr__title");
+        title.textContent = product.title;
+
+        const productTitle = document.createElement("a");
+        productTitle.classList.add("productTitle");
+
+        const productSubtitle = document.createElement("h2");
+        productSubtitle.classList.add("product__productSubtitle");
+        productSubtitle.textContent = product.subtitle;
+
+        const price = document.createElement("div");
+        price.classList.add("product__price");
+        price.textContent = product.price;
+
+        const color = document.createElement("div");
+        color.classList.add("product__color");
+        color.textContent = product.color;
+
+        const size = document.createElement("div");
+        size.classList.add("product__size");
+        size.textContent = product.size;
+
+        const quantity = document.createElement("div");
+        quantity.classList.add("product__quantity");
+        quantity.textContent = product.quantity;
+
+        container.appendChild(productEl);
+        productEl.appendChild(title);
+        title.appendChild(title);
+        title.appendChild(modelName);
+        productEl.appendChild(carImg);
+        productEl.appendChild(descr);
+        productEl.appendChild(price);
+      });
+    </script>
+  </body>
+</html>
