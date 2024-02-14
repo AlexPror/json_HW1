@@ -18,11 +18,19 @@
         let card = document.createElement("div");
         card.classList.add("item");
         productCard += '<img src="' + data[key].image + '">';
-        productCard += "<div>" + data[key].title + "</div>";
-        productCard += "<p>" + data[key].text + "</p>";
+        productCard += "<div class='title'>" + data[key].title + "</div>";
+        productCard += "<p class='descr'>" + data[key].text + "</p>";
         data[key].currency === "USD"
-          ? (productCard += "<div>" + "$" + data[key].price + "</div>")
-          : (productCard += "<div>" + "P" + data[key].price + "</div>");
+          ? (productCard +=
+              "<div class='currency'>" +
+              "$" +
+              data[key].price.toFixed(2) +
+              "</div>")
+          : (productCard +=
+              "<div class='currency'>" +
+              "P" +
+              data[key].price.toFixed(2) +
+              "</div>");
         card.innerHTML = productCard;
         document.querySelector(".products").append(card);
       }

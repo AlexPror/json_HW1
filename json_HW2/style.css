@@ -18,14 +18,47 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .item {
   width: 360px;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 img {
   max-width: 100%;
+}
+
+.title {
+  color: rgb(0, 0, 0);
+  font-family: Lato;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  margin-left: 15px;
+  margin-top: 24px;
+}
+
+.descr {
+  color: rgb(93, 93, 93);
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+  text-align: left;
+  margin-left: 15px;
+  margin-top: 16px;
+}
+
+.currency {
+  color: rgb(241, 109, 127);
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: left;
+  margin-left: 15px;
+  margin-top: 16px;
 }
