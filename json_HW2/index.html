@@ -10,31 +10,10 @@
   <body>
     <div class="container">
       <div class="products"></div>
+      <div class="cart-items"></div>
     </div>
-    <script src="data.js"></script>
-    <script>
-      const data = JSON.parse(dataProducts);
-      for (const key in data) {
-        let productCard = "";
-        let card = document.createElement("div");
-        card.classList.add("item");
-        productCard += '<img src="' + data[key].image + '">';
-        productCard += "<div class='title'>" + data[key].title + "</div>";
-        productCard += "<p class='descr'>" + data[key].text + "</p>";
-        data[key].currency === "USD"
-          ? (productCard +=
-              "<div class='currency'>" +
-              "$" +
-              data[key].price.toFixed(2) +
-              "</div>")
-          : (productCard +=
-              "<div class='currency'>" +
-              "₽" +
-              data[key].price.toFixed(2) +
-              "</div>");
-        card.innerHTML = productCard;
-        document.querySelector(".products").append(card);
-      }
-    </script>
+
+    <script src="assets/js/products-json.js"></script>
+    <script src="assets/js/app.js"></script>
   </body>
 </html>
